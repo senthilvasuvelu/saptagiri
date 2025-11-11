@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Saptagiri Cold Storage</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
   <nav class="navbar">
     <div class="nav-container">
-      <a href="index.html" class="logo">
-        <img src="images/logo.png" alt="Saptagiri Cold Storage" />
-        <span>Saptagiri Cold Storage</span>
+      <a class="logo" href="index.html">
+        <img src="images/logo.png" alt="logo" class="logo-img">
+        <span class="brand">Saptagiri Cold Storage</span>
       </a>
-      <button class="menu-toggle" id="menu-toggle">☰</button>
-      <ul class="nav-links" id="nav-links">
+
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+      <ul id="nav-links" class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -24,42 +26,50 @@
       </ul>
     </div>
   </nav>
+
   <header class="hero">
-    <h1>Reliable Cold Storage — Preserving Freshness, Delivering Trust</h1>
-    <p>Multi-zone temperature-controlled warehousing with 24×7 monitoring, power backup, and hygienic handling. Ideal for seafood, dairy, pharmaceuticals, and agricultural produce.</p>
-    <div class="hero-buttons">
-      <a href="contact.html" class="btn-primary">Request a Quote</a>
-      <a href="services.html" class="btn-secondary">Our Services</a>
+    <div class="snow-wrapper" aria-hidden="true">
+      <div class="snow"></div>
     </div>
+
+    <div class="hero-inner">
+      <h1>Reliable Cold Storage — Preserving Freshness, Delivering Trust</h1>
+      <p class="lead">Multi-zone temperature-controlled warehousing with 24×7 monitoring, power backup and hygienic handling.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="contact.html">Request a Quote</a>
+        <a class="btn btn-ghost" href="services.html">Our Services</a>
+      </div>
+    </div>
+
+    <img src="images/snowman.png" alt="snowman" class="snowman">
   </header>
-  <section class="services">
-    <h2>Our Services</h2>
-    <div class="service-card">
-      <h3>-18°C Cold Room</h3>
-      <p>Deep freeze storage for frozen foods, seafood, and long-term frozen storage.</p>
-    </div>
-    <div class="service-card">
-      <h3>0°C Cold Room</h3>
-      <p>Chilled storage for dairy, fresh produce, and temperature-sensitive items.</p>
-    </div>
-    <div class="service-card">
-      <h3>Refrigerated Transportation</h3>
-      <p>Integrated transport with GPS tracking to keep the condition intact during transit.</p>
-    </div>
-    <div class="service-card">
-      <h3>Value-Added Services</h3>
-      <p>Counting, labeling, repacking, and order fulfillment on request.</p>
-    </div>
-  </section>
+
+  <main>
+    <section class="services">
+      <h2>Our Services</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>-18°C Cold Room</h3>
+          <p>Deep freeze storage for frozen foods, seafood and long-term frozen storage.</p>
+        </article>
+        <article class="card">
+          <h3>0°C Cold Room</h3>
+          <p>Chilled storage for dairy, fresh produce and temperature-sensitive items.</p>
+        </article>
+        <article class="card">
+          <h3>Refrigerated Transportation</h3>
+          <p>Integrated transport with GPS tracking to keep conditions intact during transit.</p>
+        </article>
+        <article class="card">
+          <h3>Value-Added Services</h3>
+          <p>Counting, labeling, repacking and order fulfillment on request.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
   <footer>
-    <p>&copy; 2025 Saptagiri Cold Storage. All rights reserved.</p>
+    <p>© 2025 Saptagiri Cold Storage | All Rights Reserved</p>
   </footer>
-  <script>
-    const menuToggle = document.getElementById("menu-toggle");
-    const navLinks = document.getElementById("nav-links");
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("show");
-    });
-  </script>
 </body>
 </html>

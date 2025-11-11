@@ -1,67 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Services — Saptagiri Cold Storage</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services — Saptagiri Cold Storage</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-<script src="js/snow.js"></script>
-<header id="site-header">
-  <div class="brand">
-    <div class="logo"><div class="mark"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24"><defs></defs><g fill="none" fill-rule="evenodd"><rect rx="6" width="24" height="24" fill="#2FBDFF"/><path d="M6.5 12c0-3 5-5 5-5s5 2 5 5c0 1.657-1.343 3-3 3h-4c-1.657 0-3-1.343-3-3z" fill="#fff"/></g></svg></div></div>
-    <div style="line-height:1">
-      <div style="font-weight:700">Saptagiri Cold Storage</div>
-      <div style="font-size:12px;color:#406b86">Nearby R.S. Puram · Coimbatore</div>
-    </div>
-  </div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-    <a class="cta" href="contact.html">Get a Quote</a>
-  </nav>
-</header>
-<div class="snowman bottom-left small"><svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 64 64"><g fill="none" fill-rule="evenodd"><circle cx="32" cy="44" r="12" fill="#fff"/><circle cx="32" cy="24" r="8" fill="#fff"/><circle cx="29" cy="22" r="1" fill="#333"/><circle cx="35" cy="22" r="1" fill="#333"/><path d="M32 25c1 0 2 .5 2 1s-1 1-2 1-2-.5-2-1 1-1 2-1z" fill="#F28C28"/><path d="M22 14c0-2 3-4 6-4s6 2 6 4v2h-12v-2z" fill="#2FBDFF"/><path d="M20 52c0-2 8-4 12-4s12 2 12 4c0 0-6 6-12 6s-12-6-12-6z" fill="#E6F7FF" opacity="0.7"/></g></svg></div>
-<div class="snowman top-right medium"><svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 64 64"><g fill="none" fill-rule="evenodd"><circle cx="32" cy="44" r="12" fill="#fff"/><circle cx="32" cy="24" r="8" fill="#fff"/><circle cx="29" cy="22" r="1" fill="#333"/><circle cx="35" cy="22" r="1" fill="#333"/><path d="M32 25c1 0 2 .5 2 1s-1 1-2 1-2-.5-2-1 1-1 2-1z" fill="#F28C28"/><path d="M22 14c0-2 3-4 6-4s6 2 6 4v2h-12v-2z" fill="#2FBDFF"/><path d="M20 52c0-2 8-4 12-4s12 2 12 4c0 0-6 6-12 6s-12-6-12-6z" fill="#E6F7FF" opacity="0.7"/></g></svg></div>
-<main>
-
-<section class="section container">
-  <h3>Services</h3>
-  <div style="margin-top:12px" class="service-grid">
-    <div class="card">
-      <h4>-18°C Cold Room</h4>
-      <p style="color:#6b7b8c">Designed for long-term frozen storage. -18°C maintained, pallet racking, controlled access, and scheduled maintenance.</p>
-      <ul style="line-height:1.7;color:#23475f">
-        <li>• Pallet positions</li><li>• FIFO handling</li><li>• Regular monitoring</li>
+  <!-- same navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a class="logo" href="index.html"><img src="images/logo.png" class="logo-img"><span class="brand">Saptagiri Cold Storage</span></a>
+      <button id="menu-toggle-2" class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <ul id="nav-links-2" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="quote-btn" href="contact.html">Get a Quote</a></li>
       </ul>
     </div>
-    <div class="card">
-      <h4>0°C Cold Room</h4>
-      <p style="color:#6b7b8c">Precision-chilled storage for dairy, vegetables, fruits and sensitive goods.</p>
-      <ul style="line-height:1.7;color:#23475f"><li>• Humidity control</li><li>• Gentle handling</li></ul>
-    </div>
-    <div class="card"><h4>Transportation</h4><p style="color:#6b7b8c">Refrigerated pickup and delivery with temperature logging.</p></div>
-    <div class="card"><h4>Value Added</h4><p style="color:#6b7b8c">Repacking, labeling and order fulfilment services.</p></div>
-  </div>
-</section>
+  </nav>
 
-</main>
-<footer><div class="container">Saptagiri Cold Storage • © 2025 • Coimbatore</div></footer>
-<script>
-// Navbar scroll toggle
-(function(){
-  var header = document.getElementById('site-header');
-  function onScroll(){ if(window.scrollY>30) header.classList.add('scrolled'); else header.classList.remove('scrolled'); }
-  window.addEventListener('scroll', onScroll); onScroll();
-  // simple gallery lightbox handling
-  document.querySelectorAll('.gallery-grid img').forEach(function(img){
-    img.addEventListener('click', function(){ var lb = document.getElementById('lightbox'); var li = document.getElementById('lightboxImg'); li.src = img.dataset.large || img.src; lb.classList.add('show'); });
-  });
-  document.getElementById && document.addEventListener('click', function(e){ if(e.target && e.target.id=='lightbox') document.getElementById('lightbox').classList.remove('show'); });
-})();
-</script>
-<div id="lightbox" class="lightbox" onclick="this.classList.remove('show')"><img id="lightboxImg" src=""></div>
-</body></html>
+  <main class="content">
+    <h1>Services & Pricing</h1>
+    <p>We offer secure cold storage and logistics services. Below are typical rates — contact us for custom quotes.</p>
+
+    <table class="pricing">
+      <thead><tr><th>Service</th><th>Rate</th></tr></thead>
+      <tbody>
+        <tr><td>General Cold Storage</td><td>₹1.50 per kg/day</td></tr>
+        <tr><td>Frozen Storage</td><td>₹2.00 per kg/day</td></tr>
+        <tr><td>Customized Units</td><td>Contact for Quote</td></tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>© 2025 Saptagiri Cold Storage | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

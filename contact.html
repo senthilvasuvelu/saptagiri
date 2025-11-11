@@ -1,69 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Contact — Saptagiri Cold Storage</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Saptagiri Cold Storage</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-<script src="js/snow.js"></script>
-<header id="site-header">
-  <div class="brand">
-    <div class="logo"><div class="mark"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24"><defs></defs><g fill="none" fill-rule="evenodd"><rect rx="6" width="24" height="24" fill="#2FBDFF"/><path d="M6.5 12c0-3 5-5 5-5s5 2 5 5c0 1.657-1.343 3-3 3h-4c-1.657 0-3-1.343-3-3z" fill="#fff"/></g></svg></div></div>
-    <div style="line-height:1">
-      <div style="font-weight:700">Saptagiri Cold Storage</div>
-      <div style="font-size:12px;color:#406b86">Nearby R.S. Puram · Coimbatore</div>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a class="logo" href="index.html"><img src="images/logo.png" class="logo-img"><span class="brand">Saptagiri Cold Storage</span></a>
+      <button id="menu-toggle-3" class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <ul id="nav-links-3" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a class="quote-btn" href="contact.html">Get a Quote</a></li>
+      </ul>
     </div>
-  </div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-    <a class="cta" href="contact.html">Get a Quote</a>
   </nav>
-</header>
-<div class="snowman bottom-left small"><svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 64 64"><g fill="none" fill-rule="evenodd"><circle cx="32" cy="44" r="12" fill="#fff"/><circle cx="32" cy="24" r="8" fill="#fff"/><circle cx="29" cy="22" r="1" fill="#333"/><circle cx="35" cy="22" r="1" fill="#333"/><path d="M32 25c1 0 2 .5 2 1s-1 1-2 1-2-.5-2-1 1-1 2-1z" fill="#F28C28"/><path d="M22 14c0-2 3-4 6-4s6 2 6 4v2h-12v-2z" fill="#2FBDFF"/><path d="M20 52c0-2 8-4 12-4s12 2 12 4c0 0-6 6-12 6s-12-6-12-6z" fill="#E6F7FF" opacity="0.7"/></g></svg></div>
-<div class="snowman top-right medium"><svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 64 64"><g fill="none" fill-rule="evenodd"><circle cx="32" cy="44" r="12" fill="#fff"/><circle cx="32" cy="24" r="8" fill="#fff"/><circle cx="29" cy="22" r="1" fill="#333"/><circle cx="35" cy="22" r="1" fill="#333"/><path d="M32 25c1 0 2 .5 2 1s-1 1-2 1-2-.5-2-1 1-1 2-1z" fill="#F28C28"/><path d="M22 14c0-2 3-4 6-4s6 2 6 4v2h-12v-2z" fill="#2FBDFF"/><path d="M20 52c0-2 8-4 12-4s12 2 12 4c0 0-6 6-12 6s-12-6-12-6z" fill="#E6F7FF" opacity="0.7"/></g></svg></div>
-<main>
 
-<section class="section container">
-  <h3>Contact Us</h3>
-  <div class="contact-grid" style="margin-top:12px">
-    <form onsubmit="event.preventDefault(); alert('Thank you! We received your inquiry.'); this.reset();">
-      <label>Name</label><input required name="name" placeholder="Your name">
-      <label>Email</label><input required name="email" type="email" placeholder="you@company.com">
-      <label>Phone</label><input name="phone" placeholder="Mobile number">
-      <label>Message</label><textarea name="message" rows="5" placeholder="Tell us about your requirement"></textarea>
-      <div style="margin-top:10px;display:flex;gap:10px;align-items:center"><button type="submit" class="cta">Send Inquiry</button><div style="color:#6b7b8c">Or email: <a href="mailto:svasuvelu@gmail.com">svasuvelu@gmail.com</a></div></div>
+  <main class="content">
+    <h1>Contact Us</h1>
+    <p><strong>Address:</strong> Near NH-44, Anantapur, Andhra Pradesh</p>
+    <p><strong>Phone:</strong> +91 98765 43210</p>
+    <p><strong>Email:</strong> contact@saptagiricoldstorage.com</p>
+
+    <form class="contact-form" onsubmit="alert('Message sent (demo)'); return false;">
+      <label>Name</label><input required>
+      <label>Email</label><input type="email" required>
+      <label>Message</label><textarea rows="5"></textarea>
+      <button type="submit" class="btn btn-primary">Send Message</button>
     </form>
-    <div class="card" style="padding:18px;border-radius:12px">
-      <h4 style="margin:0 0 6px">Saptagiri Cold Storage</h4>
-      <div>46, Subramaniya Udayar Street<br>Telengupalayam, Coimbatore - 641039</div>
-      <div style="margin-top:8px;font-weight:700">Mobile: +91 86100 75858</div>
-      <div>Email: <a href="mailto:svasuvelu@gmail.com">svasuvelu@gmail.com</a></div>
-      <div style="margin-top:12px">
-        <iframe width="100%" height="220" frameborder="0" style="border:0;border-radius:8px" src="https://maps.google.com/maps?q=R.S.%20Puram%2C%20Coimbatore&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
-      </div>
-    </div>
-  </div>
-</section>
+  </main>
 
-</main>
-<footer><div class="container">Saptagiri Cold Storage • © 2025 • Coimbatore</div></footer>
-<script>
-// Navbar scroll toggle
-(function(){
-  var header = document.getElementById('site-header');
-  function onScroll(){ if(window.scrollY>30) header.classList.add('scrolled'); else header.classList.remove('scrolled'); }
-  window.addEventListener('scroll', onScroll); onScroll();
-  // simple gallery lightbox handling
-  document.querySelectorAll('.gallery-grid img').forEach(function(img){
-    img.addEventListener('click', function(){ var lb = document.getElementById('lightbox'); var li = document.getElementById('lightboxImg'); li.src = img.dataset.large || img.src; lb.classList.add('show'); });
-  });
-  document.getElementById && document.addEventListener('click', function(e){ if(e.target && e.target.id=='lightbox') document.getElementById('lightbox').classList.remove('show'); });
-})();
-</script>
-<div id="lightbox" class="lightbox" onclick="this.classList.remove('show')"><img id="lightboxImg" src=""></div>
-</body></html>
+  <footer>
+    <p>© 2025 Saptagiri Cold Storage | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
